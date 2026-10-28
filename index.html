@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sistem Bahan Bakar Diesel Konvensional – Bahan Ajar SMK</title>
+<style>
+:root{--bg:#f3f5f2;--sf:#fff;--tx:#1b2420;--mu:#55625b;--ac:#c8590a;--gr:#1f5a45;--ln:#d5dbd6;--wa:#fff4e5;--ok:#e7f3ec;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121814;--sf:#1a231e;--tx:#e8eee9;--mu:#9aa89f;--ac:#f08a3c;--gr:#6fc29d;--ln:#2d3a33;--wa:#2b2214;--ok:#16281f}}
+*{box-sizing:border-box}html{scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.65 Georgia,"Times New Roman",serif}
+h1,h2,h3,nav,.tag,th{font-family:"Trebuchet MS",Verdana,sans-serif}
+header{background:var(--gr);color:#fff;padding:36px 20px}
+header div,main,nav div{max-width:920px;margin:auto}
+header h1{margin:0 0 8px;font-size:clamp(1.6rem,4vw,2.4rem);line-height:1.2}
+header p{margin:0;opacity:.9;max-width:62ch}
+nav{position:sticky;top:0;background:var(--sf);border-bottom:2px solid var(--ln);z-index:5}
+nav div{display:flex;overflow-x:auto}
+nav a{padding:12px 16px;color:var(--tx);text-decoration:none;white-space:nowrap;font-size:.92rem;border-bottom:3px solid transparent}
+nav a:hover,nav a:focus-visible,nav a.on{border-color:var(--ac);color:var(--ac);outline:none}
+main{padding:20px}
+section{background:var(--sf);border:1px solid var(--ln);border-radius:6px;padding:22px;margin:20px 0}
+h2{margin:0 0 4px;color:var(--gr);font-size:1.5rem}
+h3{margin:22px 0 6px;font-size:1.1rem}
+.tag{display:inline-block;background:var(--ac);color:#fff;font-size:.8rem;padding:2px 10px;border-radius:3px;margin-bottom:8px}
+.tujuan{background:var(--ok);border-left:4px solid var(--gr);padding:10px 14px;margin:12px 0;font-size:.95rem}
+.warn{background:var(--wa);border-left:4px solid var(--ac);padding:10px 14px;margin:12px 0}
+.flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:14px 0;font-family:"Trebuchet MS",sans-serif;font-size:.82rem}
+.flow b{background:var(--gr);color:#fff;padding:6px 10px;border-radius:4px;font-weight:600}
+.flow b.hp{background:var(--ac)}
+.flow i{color:var(--mu);font-style:normal}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.92rem;min-width:560px}
+th,td{border:1px solid var(--ln);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--ok)}
+details{border:1px solid var(--ln);border-radius:4px;margin:8px 0;padding:0 14px}
+summary{cursor:pointer;padding:10px 0;font-family:"Trebuchet MS",sans-serif;font-weight:600}
+summary:focus-visible,a:focus-visible{outline:2px solid var(--ac)}
+details[open] summary{border-bottom:1px solid var(--ln);margin-bottom:8px}
+ul,ol{padding-left:22px}li{margin:4px 0}
+.q{margin-top:14px}.q button{font:inherit;font-family:"Trebuchet MS",sans-serif;display:block;width:100%;text-align:left;margin:6px 0;padding:9px 12px;border:1px solid var(--ln);border-radius:4px;background:var(--bg);color:var(--tx);cursor:pointer}
+.q button.b{background:var(--ok);border-color:var(--gr)}.q button.s{background:var(--wa);border-color:var(--ac)}
+footer{text-align:center;color:var(--mu);padding:24px 20px 40px;font-size:.88rem}
+</style>
+</head>
+<body>
+<header><div>
+<h1>Sistem Bahan Bakar Mesin Diesel Konvensional</h1>
+<p>Bahan ajar Teknik Kendaraan Ringan / Otomotif SMK: konsep, komponen, cara kerja, diagnosis kerusakan, dan prosedur perawatan.</p>
+</div></header>
+<nav><div>
+<a href="#A">A. Prinsip Kerja</a><a href="#B">B. Komponen</a><a href="#C">C. Cara Kerja</a><a href="#D">D. Troubleshooting</a><a href="#E">E. Praktik</a><a href="#kuis">Kuis</a>
+</div></nav>
+<main>
+
+<section id="A">
+<span class="tag">Bagian A</span>
+<h2>Pengenalan dan Prinsip Kerja</h2>
+<div class="tujuan"><b>Tujuan:</b> peserta didik mampu menjelaskan definisi, ciri mesin diesel, proses auto-ignition, dan jalur bahan bakar dari tangki ke ruang bakar.</div>
+
+<h3>1. Definisi dan karakteristik mesin diesel konvensional</h3>
+<p>Mesin diesel adalah motor pembakaran dalam (<i>internal combustion engine</i>) yang menyalakan bahan bakar dengan panas hasil kompresi udara, tanpa busi. Disebut <b>konvensional</b> karena pengaturan bahan bakarnya masih <b>mekanis</b> (pompa injeksi digerakkan mesin, governor mekanis), bukan <i>common rail</i> yang dikendalikan ECU.</p>
+<div class="tw"><table>
+<tr><th>Aspek</th><th>Mesin diesel</th><th>Mesin bensin</th></tr>
+<tr><td>Bahan bakar</td><td>Solar (cetane number ± 48–51)</td><td>Bensin (oktan)</td></tr>
+<tr><td>Yang dikompresi</td><td>Udara saja</td><td>Campuran udara + bensin</td></tr>
+<tr><td>Rasio kompresi</td><td>15:1 – 22:1</td><td>8:1 – 12:1</td></tr>
+<tr><td>Tekanan kompresi</td><td>± 30–40 kg/cm² (suhu ± 500–700 °C)</td><td>± 10–15 kg/cm²</td></tr>
+<tr><td>Penyalaan</td><td>Panas kompresi (auto-ignition)</td><td>Percikan busi</td></tr>
+<tr><td>Pengaturan tenaga</td><td>Jumlah solar yang diinjeksikan (udara tidak dibatasi)</td><td>Katup throttle mengatur campuran</td></tr>
+<tr><td>Efisiensi termal</td><td>Lebih tinggi, lebih irit, torsi besar</td><td>Lebih rendah</td></tr>
+</table></div>
+<p><b>Karakteristik lain:</b> konstruksi lebih kuat dan berat, getaran dan suara lebih kasar, emisi berupa partikulat (jelaga) dan NOx, serta sangat sensitif terhadap <b>kebersihan bahan bakar</b> karena presisi pompa injeksi dan injektor sangat tinggi (toleransi sekitar 1/1000 mm).</p>
+
+<h3>2. Prinsip pembakaran mandiri (auto-ignition)</h3>
+<ol>
+<li><b>Langkah isap:</b> piston turun, hanya udara murni masuk silinder.</li>
+<li><b>Langkah kompresi:</b> piston naik menekan udara hingga bersuhu ± 500–700 °C, di atas titik nyala solar (± 250–350 °C).</li>
+<li><b>Injeksi:</b> sesaat sebelum TMA, solar dikabutkan bertekanan tinggi. Kabut bahan bakar menyerap panas, menguap, lalu menyala sendiri.</li>
+<li><b>Langkah usaha:</b> tekanan gas pembakaran mendorong piston turun.</li>
+<li><b>Langkah buang:</b> gas sisa dikeluarkan.</li>
+</ol>
+<p><b>Ignition delay</b> adalah jeda antara awal injeksi sampai bahan bakar menyala. Jika terlalu lama (cetane rendah atau mesin dingin), bahan bakar menumpuk lalu terbakar serentak sehingga terdengar <i>diesel knock</i> (ngelitik kasar).</p>
+
+<h3>Skema alir bahan bakar</h3>
+<div class="flow"><b>Tangki</b><i>→</i><b>Water sedimenter / pre-filter</b><i>→</i><b>Feed pump</b><i>→</i><b>Fuel filter</b><i>→</i><b>Pompa injeksi</b><i>→</i><b class="hp">Pipa tekanan tinggi</b><i>→</i><b class="hp">Injektor</b><i>→</i><b class="hp">Ruang bakar</b></div>
+<div class="flow"><i>Kelebihan solar (return):</i><b>Overflow valve (pompa injeksi / filter)</b><i>→</i><b>Pipa return</b><i>→</i><b>Tangki</b></div>
+<p>Hijau = sisi <b>tekanan rendah</b> (± 0,1–0,3 MPa atau ± 1–3 kg/cm²). Oranye = sisi <b>tekanan tinggi</b> (± 12–20 MPa pada injektor, ± 120–200 kg/cm²).</p>
+</section>
+
+<section id="B">
+<span class="tag">Bagian B</span>
+<h2>Komponen Utama dan Fungsinya</h2>
+<div class="tujuan"><b>Tujuan:</b> peserta didik mampu menyebutkan letak, fungsi, dan konstruksi tiap komponen. Klik judul untuk membuka detail.</div>
+
+<details open><summary>1. Fuel tank (tangki bahan bakar)</summary>
+<p><b>Fungsi:</b> menyimpan solar dan mengendapkan kotoran serta air.</p>
+<ul>
+<li>Terbuat dari pelat baja berlapis anti karat atau plastik (HDPE); dilengkapi tutup berventilasi agar tekanan udara seimbang.</li>
+<li><b>Sekat (baffle)</b> mencegah solar bergolak saat kendaraan bergerak.</li>
+<li><b>Pipa hisap</b> berada sedikit di atas dasar tangki, sehingga endapan tidak ikut terhisap. Ada <b>sumbat pembuangan (drain plug)</b> di dasar, serta <b>fuel sender</b> (pengirim sinyal indikator).</li>
+<li>Pipa return masuk kembali ke tangki.</li>
+</ul></details>
+
+<details><summary>2. Feed pump / priming pump (pompa penyalur)</summary>
+<p><b>Fungsi:</b> menghisap solar dari tangki dan mengalirkannya ke pompa injeksi melalui filter dengan tekanan rendah. Jumlah yang dialirkan lebih besar dari kebutuhan agar pompa injeksi selalu penuh dan terlumasi.</p>
+<ul>
+<li><b>Tipe plunger (piston):</b> terpasang di pompa injeksi in-line, digerakkan oleh <b>eksentrik poros cam</b> pompa. Berisi piston, pegas, katup isap dan katup tekan.</li>
+<li><b>Tipe vane (sudu):</b> terpasang di dalam pompa distributor (VE), digerakkan oleh poros pompa.</li>
+<li><b>Priming pump (pompa tangan):</b> berupa pompa tangan (plunger atau membran/diafragma) untuk mengisi sistem dan membuang udara saat mesin mati.</li>
+</ul></details>
+
+<details><summary>3. Fuel filter dan water sedimenter</summary>
+<p><b>Fungsi fuel filter:</b> menyaring kotoran padat (partikel ± 5–10 mikron) agar plunger, delivery valve, dan nozzle tidak aus atau tersumbat. Elemen dari kertas berpori atau bahan serat.</p>
+<p><b>Fungsi water sedimenter (water separator):</b> memisahkan air dari solar. Air lebih berat daripada solar sehingga mengendap di bagian bawah. Dilengkapi <b>drain plug</b> dan sering memiliki <b>sensor/lampu peringatan air</b> pada dasbor.</p>
+<div class="warn"><b>Mengapa air berbahaya?</b> Air menyebabkan karat, merusak pelumasan solar pada plunger (solar berfungsi juga sebagai pelumas), dan merusak ujung nozzle akibat penguapan mendadak.</div></details>
+
+<details><summary>4. Injection pump (pompa injeksi)</summary>
+<p><b>Fungsi:</b> (1) menaikkan tekanan solar, (2) mengukur jumlah solar sesuai beban, (3) mengatur saat injeksi (timing), dan (4) mendistribusikan solar ke tiap silinder sesuai urutan penyalaan (<i>firing order</i>).</p>
+<div class="tw"><table>
+<tr><th>Aspek</th><th>In-line (tipe segaris)</th><th>Distributor (tipe VE / rotary)</th></tr>
+<tr><td>Elemen pompa</td><td>Satu elemen (plunger + barrel) per silinder, tersusun segaris</td><td>Satu plunger pemompa saja, berputar sekaligus bolak-balik</td></tr>
+<tr><td>Penggerak plunger</td><td>Poros nok (camshaft) pompa</td><td>Cam plate (pelat nok) dan roller ring</td></tr>
+<tr><td>Pembagian solar</td><td>Tiap elemen ke silinder masing-masing</td><td>Distributor head (rotor berlubang) membagi ke tiap delivery valve</td></tr>
+<tr><td>Pengaturan jumlah</td><td>Plunger diputar oleh control rack (alur miring/helix)</td><td>Control sleeve digeser governor</td></tr>
+<tr><td>Pelumasan</td><td>Oli mesin (ruang cam)</td><td>Solar itu sendiri</td></tr>
+<tr><td>Penggunaan</td><td>Truk, bus, mesin besar</td><td>Mobil penumpang, pick-up, mesin kecil-menengah</td></tr>
+</table></div>
+<h3>Komponen penting pompa injeksi</h3>
+<ul>
+<li><b>Plunger dan barrel:</b> pasangan presisi (lapping); plunger naik menekan solar. <b>Helix (alur miring)</b> pada plunger menentukan akhir injeksi dan jumlah solar.</li>
+<li><b>Delivery valve:</b> katup satu arah penahan tekanan sisa di pipa tinggi, menyedot sedikit solar (<i>retraction</i>) di akhir injeksi agar nozzle tidak meneteskan solar (<i>dripping</i>).</li>
+<li><b>Governor:</b> pengatur putaran. Governor mekanis (bobot sentrifugal) menjaga putaran stasioner agar stabil dan membatasi putaran maksimum.</li>
+<li><b>Timer (automatic advance):</b> memajukan saat injeksi pada putaran tinggi karena ignition delay yang tetap membutuhkan injeksi lebih awal.</li>
+<li><b>Fuel cut solenoid (pada VE):</b> mematikan mesin dengan memutus aliran solar saat kunci kontak OFF.</li>
+</ul></details>
+
+<details><summary>5. Injection nozzle / injector (nozel injeksi)</summary>
+<p><b>Fungsi:</b> mengabutkan (atomisasi) solar bertekanan tinggi ke ruang bakar dengan pola semprotan yang tepat, serta membuka dan menutup pada tekanan tertentu.</p>
+<ul>
+<li><b>Nozzle holder:</b> rumah, pegas tekan, dan baut penyetel tekanan (shim).</li>
+<li><b>Nozzle body dan needle valve:</b> jarum nozzle ditekan pegas ke dudukan. Saat tekanan solar melebihi tekanan pegas, jarum terangkat dan solar menyembur.</li>
+<li><b>Tekanan pembukaan (opening pressure):</b> ± 120–200 kg/cm² (disesuaikan spesifikasi pabrik).</li>
+<li><b>Tipe nozzle:</b> <i>pintle</i> (ruang bakar kamar muka / pusaran, pola kerucut) dan <i>hole type</i> (injeksi langsung, 3–5 lubang, tekanan lebih tinggi).</li>
+<li><b>Ciri semprotan yang baik:</b> kabut halus, merata, simetris, tidak menetes, ada bunyi “cekrek” tajam saat diuji.</li>
+</ul></details>
+</section>
+
+<section id="C">
+<span class="tag">Bagian C</span>
+<h2>Cara Kerja Sistem</h2>
+<div class="tujuan"><b>Tujuan:</b> peserta didik mampu menjelaskan urutan aliran pada sisi tekanan rendah, sisi tekanan tinggi, dan sistem pengembalian.</div>
+
+<h3>1. Aliran tekanan rendah (tangki ke pompa injeksi)</h3>
+<ol>
+<li>Feed pump menghisap solar dari tangki melalui <b>pipa/selang hisap</b> (langkah isap pompa).</li>
+<li>Solar melewati <b>water sedimenter</b>; air dan kotoran kasar mengendap.</li>
+<li>Pada langkah tekan, solar didorong melalui <b>fuel filter</b> sehingga partikel halus tertahan.</li>
+<li>Solar bersih masuk ke <b>ruang isi (gallery)</b> pompa injeksi bertekanan ± 1–3 kg/cm².</li>
+<li>Jika tekanan di gallery sudah cukup, feed pump (tipe plunger) berhenti memompa secara efektif karena pegas tidak lagi mampu menekan piston ke bawah.</li>
+</ol>
+
+<h3>2. Aliran tekanan tinggi (pompa injeksi ke injektor)</h3>
+<ol>
+<li>Saat plunger bergerak naik, lubang isap (<i>inlet port</i>) tertutup, dan solar terkompresi.</li>
+<li>Tekanan melampaui pegas <b>delivery valve</b>; katup terangkat dan solar mengalir ke <b>pipa tekanan tinggi</b>.</li>
+<li>Tekanan mencapai tekanan buka injektor (± 120–200 kg/cm²); <b>needle valve terangkat</b> dan solar tersemprot ke ruang bakar. Injeksi dimulai.</li>
+<li>Plunger terus naik sampai <b>helix</b> membuka lubang spill/pembuangan. Tekanan turun mendadak, <b>injeksi berakhir</b>.</li>
+<li>Delivery valve menutup dan menarik sedikit solar dari pipa; needle valve menutup rapat.</li>
+</ol>
+<div class="tujuan"><b>Pengaturan jumlah injeksi:</b> pedal gas menggerakkan control rack (in-line) atau tuas governor (VE) sehingga memutar plunger. Posisi helix berubah, <i>effective stroke</i> bertambah/berkurang, dan solar yang disemprotkan makin banyak/sedikit.</div>
+
+<h3>3. Sistem pengembalian bahan bakar (fuel return)</h3>
+<p>Solar yang dialirkan feed pump jauh lebih banyak daripada yang diinjeksikan. Kelebihannya kembali ke tangki melalui <b>overflow valve</b> (valve pelimpah) pada baut banjo pompa injeksi atau rumah filter. Overflow valve membuka pada tekanan tertentu (± 1–2 kg/cm²) dan mempertahankan tekanan di gallery.</p>
+<p><b>Fungsi sistem return:</b></p>
+<ul>
+<li>Menjaga <b>tekanan ruang isi</b> pompa tetap stabil.</li>
+<li><b>Mendinginkan</b> pompa injeksi dan melumasi bagian bergerak.</li>
+<li><b>Membawa keluar udara</b> dan uap yang terperangkap agar tidak terjadi <i>air lock</i>.</li>
+<li><b>Return dari injektor:</b> sebagian kecil solar merembes di sekitar jarum (untuk pelumasan) dikumpulkan lewat <b>leak-off pipe</b> dan dikembalikan ke tangki.</li>
+</ul>
+</section>
+
+<section id="D">
+<span class="tag">Bagian D</span>
+<h2>Diagnosis Kerusakan (Troubleshooting)</h2>
+<div class="tujuan"><b>Tujuan:</b> peserta didik mampu menganalisis gejala, menentukan kemungkinan penyebab, dan memilih tindakan perbaikan secara sistematis (dari yang paling mudah diperiksa).</div>
+
+<h3>1. Mesin sulit hidup / tidak mau hidup</h3>
+<div class="tw"><table>
+<tr><th>Kemungkinan penyebab</th><th>Cara memeriksa</th><th>Perbaikan</th></tr>
+<tr><td><b>Udara masuk sistem (masuk angin / air lock)</b></td><td>Selang transparan ada gelembung; priming pump terasa ringan/kosong</td><td>Cek sambungan/klem/seal banjo, ganti yang bocor, lalu <b>bleeding</b></td></tr>
+<tr><td>Solar habis / tangki kosong</td><td>Lihat indikator, buka tutup tangki</td><td>Isi solar, bleeding</td></tr>
+<tr><td>Filter tersumbat</td><td>Aliran dari baut bleeder lemah</td><td>Ganti fuel filter</td></tr>
+<tr><td>Air dalam bahan bakar</td><td>Lampu water sedimenter menyala; ada air saat dikuras</td><td>Kuras, ganti filter, bersihkan tangki</td></tr>
+<tr><td>Fuel cut solenoid (VE) tidak membuka</td><td>Tidak terdengar “klik” saat kunci ON</td><td>Periksa kelistrikan; ganti solenoid</td></tr>
+<tr><td>Injektor macet / tidak mengabut</td><td>Kendurkan pipa injektor, lakukan cranking; solar tidak menyembur (tiap silinder)</td><td>Uji dan servis injektor</td></tr>
+<tr><td>Sistem pemanas awal (glow plug) rusak, kompresi rendah, aki lemah</td><td>Cek lampu glow, ukur kompresi dan tegangan aki</td><td>Ganti glow plug; perbaiki ring piston/katup; isi aki</td></tr>
+</table></div>
+<div class="warn"><b>Mengapa masuk angin sangat berpengaruh?</b> Udara bersifat dapat dimampatkan, sehingga plunger hanya menekan udara dan tekanan tak mencapai tekanan buka injektor.</div>
+
+<h3>2. Mesin berasap tidak normal</h3>
+<div class="tw"><table>
+<tr><th>Warna asap</th><th>Arti</th><th>Kemungkinan penyebab</th></tr>
+<tr><td><b>Hitam tebal</b></td><td>Pembakaran tidak sempurna (solar berlebih / udara kurang)</td><td>Filter udara tersumbat; injektor kotor/tetes/semprotan jelek; saat injeksi terlambat; pompa injeksi menyuplai berlebih; turbo bermasalah; kompresi rendah</td></tr>
+<tr><td><b>Putih tebal</b></td><td>Solar tidak terbakar, menguap menjadi kabut</td><td>Mesin masih dingin; saat injeksi terlalu lambat/terlalu maju; kompresi rendah; injektor kurang atau tidak bekerja pada satu silinder; air dalam solar (uap air)</td></tr>
+<tr><td>Biru</td><td>Oli ikut terbakar</td><td>Ring piston/seal katup aus (bukan masalah sistem bahan bakar)</td></tr>
+</table></div>
+
+<h3>3. Tenaga lemah dan putaran tidak stabil (<i>surging / pumping</i>)</h3>
+<div class="tw"><table>
+<tr><th>Gejala</th><th>Kemungkinan penyebab</th><th>Tindakan</th></tr>
+<tr><td>Tenaga lemah (<i>lack of power</i>)</td><td>Filter solar tersumbat; udara masuk dalam jumlah kecil; tekanan buka injektor turun/injektor aus; plunger aus; kabel/tuas gas tidak penuh; filter udara kotor; saat injeksi salah</td><td>Ganti filter, cek kebocoran, uji injektor, setel tuas, cek timing</td></tr>
+<tr><td>Putaran naik-turun (<i>surging</i>)</td><td>Udara terjebak dalam saluran; governor macet/pegas lemah; control rack lengket; kotoran dalam bahan bakar; injektor sebagian macet</td><td>Bleeding, servis governor/rack di bengkel, bersihkan sistem</td></tr>
+<tr><td>Putaran idle tidak stabil</td><td>Idle screw salah setel; injektor tidak seragam; udara masuk</td><td>Setel idle, uji injektor</td></tr>
+</table></div>
+<div class="tujuan"><b>Langkah sistematis:</b> (1) tanyakan gejala dan riwayat, (2) periksa visual (kebocoran, bahan bakar, filter), (3) cek aliran tekanan rendah, (4) cek injektor, (5) baru periksa pompa injeksi (pekerjaan spesialis, wajib memakai test bench).</div>
+</section>
+
+<section id="E">
+<span class="tag">Bagian E</span>
+<h2>Perawatan dan Prosedur Praktik</h2>
+<div class="tujuan"><b>Tujuan:</b> peserta didik mampu melakukan tiga prosedur dasar dengan benar, aman, dan sesuai standar (SOP).</div>
+<div class="warn"><b>Keselamatan kerja (K3):</b> gunakan sarung tangan dan kacamata; mesin <b>mati dan dingin</b>; tidak ada api/rokok; siapkan wadah penampung; lap solar yang tumpah; buang solar bekas dan filter bekas di tempat limbah B3. <b>Jangan pernah</b> mendekatkan tangan pada semprotan injektor bertekanan tinggi karena solar dapat menembus kulit.</div>
+
+<h3>1. Pengurasan air pada water sedimenter</h3>
+<p><b>Alat/bahan:</b> wadah, kunci/kunci pas, kain lap, sarung tangan. <b>Waktu:</b> sesuai jadwal (umumnya tiap 5.000–10.000 km) atau saat lampu peringatan menyala.</p>
+<ol>
+<li>Matikan mesin, parkir di tempat rata, pasang rem tangan.</li>
+<li>Letakkan wadah di bawah water sedimenter.</li>
+<li>Longgarkan <b>drain plug</b> di dasar sedimenter (± 1–2 putaran, jangan dilepas).</li>
+<li>Pompa priming pump perlahan sampai air (dan solar kotor) keluar.</li>
+<li>Kuras sampai yang keluar solar jernih tanpa gelembung air/kotoran.</li>
+<li>Kencangkan kembali drain plug; bersihkan area.</li>
+<li><b>Bleeding</b> sistem (lihat prosedur 3), lalu hidupkan mesin dan periksa kebocoran.</li>
+</ol>
+
+<h3>2. Penggantian fuel filter</h3>
+<p><b>Alat/bahan:</b> filter baru (sesuai tipe), kunci filter (<i>filter wrench</i>), wadah, kain lap, solar bersih untuk mengisi filter, sarung tangan.</p>
+<ol>
+<li>Pastikan mesin mati dan dingin; siapkan wadah penampung.</li>
+<li>Kuras sisa solar dari filter lewat drain plug (jika ada).</li>
+<li>Lepas kabel sensor air (jika ada), lalu lepas filter lama dengan kunci filter (tipe sekrup/<i>spin-on</i>) atau buka cover dan keluarkan elemen (tipe cartridge).</li>
+<li>Bersihkan dudukan filter. Periksa kondisi <b>O-ring/gasket</b>, ganti bila rusak.</li>
+<li>Olesi gasket filter baru dengan sedikit solar. <b>Isi filter baru dengan solar bersih</b> bila memungkinkan untuk mengurangi udara.</li>
+<li>Pasang filter hingga gasket menyentuh dudukan, lalu kencangkan <b>1/2 – 3/4 putaran</b> dengan tangan (atau sesuai spesifikasi; jangan terlalu kencang).</li>
+<li>Pasang kembali konektor sensor.</li>
+<li>Lakukan <b>bleeding</b>, hidupkan mesin 2–3 menit, periksa kebocoran.</li>
+<li>Catat penggantian (tanggal, km) pada kartu servis. Interval umum 10.000–20.000 km atau sesuai buku manual.</li>
+</ol>
+
+<h3>3. Pembuangan udara (bleeding air)</h3>
+<p><b>Alat/bahan:</b> kunci pas (biasanya 10–12 mm), wadah, kain lap, sarung tangan. Lakukan setelah mengganti filter, bahan bakar habis, atau pembongkaran saluran.</p>
+<ol>
+<li>Pastikan tangki berisi solar yang cukup. Matikan mesin.</li>
+<li>Letakkan kain/wadah di bawah <b>baut bleeder</b> (pada rumah filter atau pompa injeksi; baut banjo atau sekrup bleeder).</li>
+<li>Longgarkan <b>bleeder screw filter</b> 1–2 putaran.</li>
+<li>Pompa <b>priming pump</b> berulang-ulang sampai solar yang keluar dari bleeder <b>bebas gelembung</b> (mengalir kontinu).</li>
+<li>Kencangkan bleeder screw sambil tetap memompa.</li>
+<li>Ulangi pada <b>bleeder pompa injeksi</b> (bila ada).</li>
+<li>Pompa priming sampai terasa <b>berat</b> (tanda sistem penuh); untuk tipe tuas pompa, kembalikan tuas pada posisi semula.</li>
+<li>Jika mesin masih belum hidup: kendurkan <b>mur pipa tekanan tinggi di injektor</b>, lakukan <i>cranking</i> (starter) 5–10 detik hingga solar keluar tanpa gelembung, lalu kencangkan kembali sesuai torsi. Untuk keselamatan, tutup area dengan kain.</li>
+<li>Hidupkan mesin; pastikan putaran stabil dan tidak ada kebocoran.</li>
+</ol>
+<div class="warn"><b>Catatan:</b> jangan men-<i>cranking</i> lebih dari 15 detik sekali jalan agar starter dan aki tidak rusak; beri jeda 30 detik.</div>
+</section>
+
+<section id="kuis">
+<span class="tag">Evaluasi</span>
+<h2>Kuis Cepat</h2>
+<div id="qz"></div>
+</section>
+</main>
+<footer>Bahan ajar Sistem Bahan Bakar Diesel Konvensional. Nilai spesifikasi bersifat umum; selalu rujuk buku manual kendaraan.</footer>
+<script>
+var Q=[
+["Apa yang dikompresi pada mesin diesel selama langkah kompresi?",["Campuran udara dan solar","Udara murni","Solar saja"],1],
+["Komponen yang mencegah solar menetes pada nozzle di akhir injeksi adalah…",["Delivery valve","Governor","Feed pump"],0],
+["Gejala asap hitam tebal paling sering disebabkan oleh…",["Oli ikut terbakar","Pembakaran tidak sempurna (solar berlebih/udara kurang)","Air di tangki saja"],1],
+["Urutan prosedur setelah mengganti fuel filter adalah…",["Langsung start mesin","Bleeding lalu cek kebocoran","Lepas injektor"],1],
+["Fungsi utama overflow valve pada sistem return adalah…",["Menaikkan tekanan injeksi","Menjaga tekanan gallery dan mengalirkan kelebihan solar ke tangki","Menyaring air"],1]];
+var el=document.getElementById("qz");
+Q.forEach(function(q,i){var d=document.createElement("div");d.className="q";d.innerHTML="<b>"+(i+1)+". "+q[0]+"</b>";
+q[1].forEach(function(o,j){var b=document.createElement("button");b.textContent=o;b.onclick=function(){
+d.querySelectorAll("button").forEach(function(x){x.className=""});
+b.className=j===q[2]?"b":"s";
+var m=d.querySelector("em");if(!m){m=document.createElement("em");d.appendChild(m)}
+m.textContent=j===q[2]?"Benar.":"Belum tepat. Coba lagi."};d.appendChild(b)});el.appendChild(d)});
+</script>
+</body>
+</html>
